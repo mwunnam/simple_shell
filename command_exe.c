@@ -37,7 +37,6 @@ void _command_exe(char *input, char **env)
 
 			if (run == -1)
 			{
-				_print("command does not exist\n");
 				exit(0);
 			}
 		}

@@ -26,5 +26,5 @@ void trimer(char *s);
 char *_strchr(char *s, char c);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, const char *src);
-
+int _strcmp(char *s1, char *s2);
 #endif
