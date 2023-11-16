@@ -22,6 +22,7 @@ void _command_exe(char *input, char **env)
 	if (argv[0] == NULL)
 	{
 		_print("Command not found\n");
+		_free_tokens(argc, argv);
 		return;
 	}
 		child_pid = fork();

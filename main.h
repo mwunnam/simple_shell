@@ -23,5 +23,7 @@ char *_strdup(const char *s);
 int _strlen(char *s);
 int _print(char *s);
 void trimer(char *s);
+char *_strchr(char *s, char c);
+
 
 #endif
