@@ -11,6 +11,8 @@
 
 /** MACROS ****/
 #define DELIM " \n"
+
+extern char **environ;
 /** FUNCTIONS **/
 
 char **_tokenizer(char *s, int argc);
@@ -26,5 +28,6 @@ void trimer(char *s);
 char *_strchr(char *s, char c);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, const char *src);
-
+int _strcmp(char *s1, char *s2);
+void _print_env(void);
 #endif
