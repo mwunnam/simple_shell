@@ -10,6 +10,7 @@ void _command_exe(char *input, char **env)
 	int argc, run, status;
 	pid_t child_pid;
 	char **argv;
+
 	if (is_emptyspace(input))
 	{
 		return;
@@ -21,15 +22,11 @@ void _command_exe(char *input, char **env)
 	if (argv[0] == NULL)
 	{
 		_print("Command not found\n");
-	/**	free(input);**/
-/**		_free_tokens(argc, argv); **/
 		return;
 	}
-
 		child_pid = fork();
 		if (child_pid < 0)
 		{
-			_print("forking was not successful\n");
 			free(input);
 			_free_tokens(argc, argv);
 		}
