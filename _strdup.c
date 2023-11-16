@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * _strdup - Function that duplicates a string
  * @s: string to be duplicated
  * Return: Pointer to the new string
