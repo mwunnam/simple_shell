@@ -9,7 +9,7 @@ int is_emptyspace(const char *s)
 {
 	while (*s)
 	{
-		if (!((*s >= 9 && *s <=13) || *s == 32))
+		if (!((*s >= 9 && *s <= 13) || *s == 32))
 		{
 			return (0);
 		}

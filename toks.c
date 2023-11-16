@@ -41,14 +41,14 @@ char **_tokenizer(char *s, int argc)
 
 	i = 0;
 	j = 0;
-	argv = malloc(sizeof(char *) * argc);
+	argv = malloc(sizeof(char *) * (argc + 1));
 	if (argv == NULL)
 	{
 		return (0);
 	}
 
 	tokens = strtok(s, DELIM);
-	while (tokens != NULL)
+	while (tokens != NULL && i < argc)
 	{
 		argv[i] = strdup(tokens);
 

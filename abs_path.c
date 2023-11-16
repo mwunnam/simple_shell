@@ -12,7 +12,7 @@ char *_command_path_checker(char *argv)
 	char *path, *path_copy, *loc_token, *command_loc;
 	size_t command_loc_size;
 
-	if (strchr(argv, '/') == NULL)
+	if (_strchr(argv, '/') == NULL)
 	{
 		path = getenv("PATH");
 		path_copy = _strdup(path);
@@ -29,8 +29,8 @@ char *_command_path_checker(char *argv)
 				return (0);
 			}
 			strcpy(command_loc, loc_token);
-			strcat(command_loc, "/");
-			strcat(command_loc, argv);
+			_strcat(command_loc, "/");
+			_strcat(command_loc, argv);
 
 			if (access(command_loc, X_OK) == 0)
 			{
