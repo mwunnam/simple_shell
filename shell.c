@@ -24,10 +24,17 @@ int main(int argc, char **env)
 			free(input);
 			return (0);
 		}
+		trimer(input);
+
 		if (_strcmp(input, "exit") == 0)
 		{
 			_print("shell exiting...\n");
-			break;
+			exit(0);
+		}
+		if (_strcmp(input, "env") == 0)
+		{
+			_print_env();
+			continue;
 		}
 		_command_exe(input, env);
 	}
